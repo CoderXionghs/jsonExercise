@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
-<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j'>
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
     <!--这个文件是用于log4j的配置，要想在Java项目中生效，必须放在和src同级的目录下 -->
     <!-- ========================== 自定义输出格式说明================================ -->
     <!-- %m 输出代码中指定的消息 -->
@@ -98,7 +98,7 @@
     <!-- Root Logger -->
     <root>
         <!-- root部分定义了log4j的默认输出级别和方式,这里默认是info级别，即info及以上级别的日志才输出 -->
-        <priority value="debug" />
+        <priority value="info" />
         <appender-ref ref="console" ></appender-ref>
         <appender-ref ref="info.log" />
         <appender-ref ref="debug.log" />

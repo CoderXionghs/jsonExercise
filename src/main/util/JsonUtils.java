@@ -27,7 +27,7 @@ public static Object jsonToBean(String json, Class cls)
 {
     String[] formats = {"yyyy-MM-dd HH:mm:ss", "yyyy-MM-dd" };
     //如果json串中，对应的字段代表的是timestamp类型，就调用下面这个函数
-    JSONUtils.getMorpherRegistry().registerMorpher(new TimestampMorpher(formats));
+    JSONUtils.getMorpherRegistry().registerMorpher(new TimestampMorpher(formats) );
 
     //注册java.Util.Date的转换函数，如果转换失败，则返回一个null对象
     JSONUtils.getMorpherRegistry().registerMorpher(new DateMorpherEx(formats,(java.util.Date)null));
@@ -56,6 +56,8 @@ public static Object jsonToBean(String json, Class cls)
         JSONObject jsonObject = JSONObject.fromObject(json);
         return JSONObject.toBean(jsonObject, cls, mapcls );
     }
+
+
     public static JSONObject beanToJson(Object obj, String dateFormat)
     {
         JsonConfig config = new JsonConfig();

@@ -17,7 +17,7 @@ public class JsonDateValueProcessor implements JsonValueProcessor
     {
         try
         {
-            sdf = new SimpleDateFormat(datePattern);
+            sdf = new SimpleDateFormat(datePattern);  //这句代码本省是不会抛出异常的，所以多余
         }
         catch (Exception e)
         {

@@ -41,7 +41,11 @@ public class MainClass
         System.out.println(jsonObj.toString());
 
         //json转为bean（含有Timestamp、Date）
+        jsonObj.put("timestamp","1992-10-19");
+        System.out.println(jsonObj.toString());
+
         Student s1 = (Student) JsonUtils.jsonToBean(jsonObj.toString(), Student.class);
-        System.out.println(s1.getTimestamp().toString());
+        System.out.println("timestamp:"+s1.getTimestamp().toString());
+        System.out.println(s1.getUtilDate().toString());
     }
 }

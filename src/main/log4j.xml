@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
-<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j'>
+    <!--这个文件是用于log4j的配置，要想在Java项目中生效，必须放在和src同级的目录下 -->
     <!-- ========================== 自定义输出格式说明================================ -->
     <!-- %m 输出代码中指定的消息 -->
     <!-- %p 输出优先级，即DEBUG，INFO，WARN，ERROR，FATAL -->
